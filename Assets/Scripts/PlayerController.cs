@@ -10,8 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Rigidbody2D rigidbody;
     [SerializeField] Transform cameraTransform;
 
-    public float boostForce = 2.0f;
-    public float sideBoost = 7f;
+    public float boostForce = 5f;
+    public float sideBoost = 5f;
 
     // float movementInput;
 

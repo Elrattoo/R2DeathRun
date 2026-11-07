@@ -9,7 +9,7 @@ public class WorldGenerate: MonoBehaviour
 
     [Header("Spawning")]
     [SerializeField] float chunkHeight = 12f;
-    [SerializeField] float spawnAheadDistance = 6f;
+    [SerializeField] float spawnAheadDistance = 24f;
     [SerializeField] float despawnDistance = 12f;
 
     [Header ("Starting Chunks")]
@@ -38,8 +38,7 @@ public class WorldGenerate: MonoBehaviour
 
     void SpawnChunk()
     {
-        GameObject chunk = Instantiate(startingChunk,new Vector3(0f, nextSpawnY,0f), Quaternion.identity);
-        chunk.transform.SetParent(transform);
+        GameObject chunk = Instantiate(startingChunk, new Vector3(0f, nextSpawnY, 0f), Quaternion.identity);
         spawnedChunks.Add(chunk);
         nextSpawnY += chunkHeight;
     }
