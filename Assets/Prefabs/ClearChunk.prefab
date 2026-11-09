@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 2605266635644577746}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.4, y: -0.14, z: 0}
-  m_LocalScale: {x: 6.193, y: 1.48632, z: 1.2386}
+  m_LocalPosition: {x: 11.5, y: 0, z: 0}
+  m_LocalScale: {x: 6, y: 1.5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 828718228348618944}
@@ -148,7 +148,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 828718228348618944}
-  - component: {fileID: 6839355835789756519}
   m_Layer: 0
   m_Name: ClearChunk
   m_TagString: Untagged
@@ -174,24 +173,6 @@ Transform:
   - {fileID: 4353647470778182747}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6839355835789756519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4043307638906656831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f252ee6717404c4c8e1bd00f0103efa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  player: {fileID: 0}
-  chunkHeight: 12.1
-  spawnAheadDistance: 24
-  despawnDistance: 24
-  startingChunk: {fileID: 4343551107412797796, guid: 6c0bde3fee12b7c4fbd18b50181a2582, type: 3}
-  firstChunkOffset: 12.1
 --- !u!1 &7395704040519716856
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +200,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1476812, y: 1.4685, z: 1.4685}
+  m_LocalScale: {x: 2, y: 1.5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 828718228348618944}
@@ -311,8 +292,8 @@ Transform:
   m_GameObject: {fileID: 9133783766329813925}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.5, y: -0.14, z: 0}
-  m_LocalScale: {x: 6.193, y: 1.48632, z: 1.2386}
+  m_LocalPosition: {x: -11.5, y: 0, z: 0}
+  m_LocalScale: {x: 6, y: 1.5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 828718228348618944}

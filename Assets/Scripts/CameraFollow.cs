@@ -21,6 +21,7 @@ public class Camera : MonoBehaviour
     void Start()
     {
         offset = transform.position - target.position;
+        offset.y += 4.5f;
     }
 
    
