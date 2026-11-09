@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Experimental.Video;
 
@@ -6,9 +7,12 @@ public class GameManager : MonoBehaviour
     enum GameState {Playing, GameOver, Pause }
 
     [SerializeField] Transform Player;
+    [SerializeField] TextMeshProUGUI scoreInput;
 
     GameState gameState;
     float score;
+    float scoreIncreas;
+    float lastScoreIncreasHight;
 
 
     public bool IsGameOver => gameState == GameState.GameOver;
@@ -16,13 +20,22 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         score = 0f;
-        float PlayerY = Player.position.y;
+        scoreIncreas = 20f;
+        lastScoreIncreasHight = 0f;
         gameState = GameState.Playing;
     }
 
+    
+
     void Update()
     {
-        if (gameState != GameState.Playing) return;
-        
+        float PlayerY = Player.position.y;
+        if(lastScoreIncreasHight + scoreIncreas < PlayerY)
+        {
+            score++;
+            lastScoreIncreasHight += scoreIncreas;
+            scoreInput.SetText(score.ToString("f0"));
+        }
+        Debug.Log("Score" + score);
     }
 }
