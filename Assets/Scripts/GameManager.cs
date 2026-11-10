@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.Experimental.Video;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,5 +38,20 @@ public class GameManager : MonoBehaviour
             scoreInput.SetText(score.ToString("f0"));
         }
         Debug.Log("Score" + score);
+    }
+
+    public void Playerdied()
+    {
+        if (gameState == GameState.GameOver) return;
+
+        gameState = GameState.GameOver;
+        Debug.Log("Game Over. Score: " + score);
+        Invoke(nameof(Restart), 2f);
+
+    }
+
+    void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

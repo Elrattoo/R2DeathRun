@@ -12,6 +12,8 @@ public class WorldGenerate: MonoBehaviour
     [SerializeField] float spawnAheadDistance = 24f;
     [SerializeField] float despawnDistance = 12f;
 
+    [SerializeField] GameObject[] chunkPrefab;    
+
     [Header ("Starting Chunks")]
     [Tooltip("Pre-placed chunks at the level start; despawned like any other chunk.")]
     [SerializeField] GameObject startingChunk;
@@ -38,7 +40,8 @@ public class WorldGenerate: MonoBehaviour
 
     void SpawnChunk()
     {
-        GameObject chunk = Instantiate(startingChunk, new Vector3(0f, nextSpawnY, 0f), Quaternion.identity);
+        GameObject  prefab = chunkPrefab[Random.Range(0, chunkPrefab.Length)];
+        GameObject chunk = Instantiate(prefab, new Vector3(0f, nextSpawnY, 0f), Quaternion.identity);
         spawnedChunks.Add(chunk);
         nextSpawnY += chunkHeight;
     }

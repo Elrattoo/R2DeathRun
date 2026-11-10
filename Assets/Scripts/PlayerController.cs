@@ -6,14 +6,16 @@ using UnityEngine.Rendering.Universal;
 public class PlayerController : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] GameManagerDependencyInfo gameManager;
+    [SerializeField] GameManager gameMangager;
     [SerializeField] Rigidbody2D rigidbody;
     [SerializeField] Transform cameraTransform;
     [SerializeField] float maxBoost;
 
 
-    public float boostForce = 5f;
-    public float sideBoost = 5f;
+    public float boostForce = 10f;
+    public float sideBoost = 12f;
+
+
 
     // float movementInput;
 
@@ -28,8 +30,8 @@ public class PlayerController : MonoBehaviour
     {
 
         //rigidbody.linearVelocity = new Vector2(0, boostForce);
-        Debug.Log(boostForce);
-        Debug.Log(rigidbody.linearVelocityY);
+        //Debug.Log(boostForce);
+        //Debug.Log(rigidbody.linearVelocityY);
     }
 
     private void FixedUpdate()
@@ -47,4 +49,23 @@ public class PlayerController : MonoBehaviour
         rigidbody.AddForce(r2d2Vector);
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.GetComponent<Enemy>() != null)
+        {
+            Die();
+        }
+    }
+
+
+    void Die()
+    {
+        rigidbody.gravityScale = 2f;
+        rigidbody.freezeRotation = false;
+
+        rigidbody.AddTorque(50f);
+        gameMangager.Playerdied();
+    }
+
 }

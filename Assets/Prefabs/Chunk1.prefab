@@ -369,6 +369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7434244363883112836}
   - component: {fileID: 4976682644939333077}
+  - component: {fileID: 8060252815322914438}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Untagged
@@ -428,6 +429,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.25}
   m_Radius: 1.5
+--- !u!114 &8060252815322914438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6757805410821590839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227dfff48ee198242aea3ce39093f4c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
 --- !u!1 &7382120657344384361
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7023993023101599547}
   - component: {fileID: 5891941011770581121}
+  - component: {fileID: 5789046188015961245}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -497,6 +511,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &5789046188015961245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7382120657344384361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227dfff48ee198242aea3ce39093f4c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
 --- !u!1 &7395704040519716856
 GameObject:
   m_ObjectHideFlags: 0
