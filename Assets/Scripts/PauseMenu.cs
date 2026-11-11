@@ -24,6 +24,6 @@ public class PauseMenue : MonoBehaviour
 
     public void menuButton()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("GameMenu");
     }
 }

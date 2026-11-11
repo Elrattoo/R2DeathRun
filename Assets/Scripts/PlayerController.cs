@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform cameraTransform;
     [SerializeField] float maxBoost;
 
+    [SerializeField] AudioSource deathSound;
+
 
     public float boostForce = 10f;
     public float sideBoost = 12f;
@@ -55,6 +57,7 @@ public class PlayerController : MonoBehaviour
         if(collision.collider.GetComponent<Enemy>() != null)
         {
             Die();
+            
         }
     }
 
@@ -65,6 +68,7 @@ public class PlayerController : MonoBehaviour
         rigidbody.freezeRotation = false;
 
         rigidbody.AddTorque(50f);
+        deathSound.Play();
         gameMangager.Playerdied();
     }
 

@@ -10,11 +10,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] Transform Player;
     [SerializeField] TextMeshProUGUI scoreInput;
 
+    [SerializeField] GameObject GameOverMenu;
+
     GameState gameState;
     float score;
     float scoreIncreas;
     float lastScoreIncreasHight;
 
+ 
 
     public bool IsGameOver => gameState == GameState.GameOver;
 
@@ -46,12 +49,19 @@ public class GameManager : MonoBehaviour
 
         gameState = GameState.GameOver;
         Debug.Log("Game Over. Score: " + score);
-        Invoke(nameof(Restart), 2f);
+        GameOverMenu.SetActive(true);
+        //Invoke(nameof(Restart), 2f);
 
     }
 
-    void Restart()
+    public void Restart()
     {
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public int getScore()
+    {
+        return (int)score;
     }
 }
