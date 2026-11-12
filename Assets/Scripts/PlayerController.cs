@@ -13,9 +13,11 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] AudioSource deathSound;
 
+    
 
-    public float boostForce = 10f;
-    public float sideBoost = 12f;
+
+    public float boostForce = 2f;
+    public float sideBoost = 4f;
 
 
 
@@ -31,9 +33,15 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        //rigidbody.linearVelocity = new Vector2(0, boostForce);
-        //Debug.Log(boostForce);
-        //Debug.Log(rigidbody.linearVelocityY);
+        if(gameMangager.getScore() > 10)
+        {
+            maxBoost = 12f;
+        }
+        if(gameMangager.getScore() > 20)
+        {
+            maxBoost = 16f;
+        }
+
     }
 
     private void FixedUpdate()
