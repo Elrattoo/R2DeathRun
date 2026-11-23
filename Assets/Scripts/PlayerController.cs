@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   /* void Update()
     {
 
         if(gameMangager.getScore() > 10)
@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
             maxBoost = 16f;
         }
 
-    }
+    }*/
 
     private void FixedUpdate()
     {
